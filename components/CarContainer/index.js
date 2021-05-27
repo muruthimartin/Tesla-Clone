@@ -1,8 +1,10 @@
 import React from 'react';
 import {Text, View, ImageBackground } from 'react-native';
 import styles from './styles'
-import StyledButton from '../StyledButton'
-const CarItem = (props) => {
+import OrderButtons from '../OrderButtons'
+/* The CarContainer Element will display the car in the background as well as the title
+and subtitles*/
+const CarContainer = (props) => {
     const {name, tagline,taglineCTA,image} = props.car;
     return(
         <View style = {styles.carContainer}>
@@ -22,7 +24,7 @@ const CarItem = (props) => {
                 </Text>
             </View> 
             <View style = {styles.buttonsContainer}>
-                <StyledButton 
+                <OrderButtons 
                     type = "primary" 
                     content = {"Custom Order"}
                     onPress = {()=>{
@@ -30,7 +32,7 @@ const CarItem = (props) => {
                     }} 
                     />
 
-                <StyledButton 
+                <OrderButtons 
                     type = "secondary" 
                     content = {"Existing inventory"}
                     onPress = {()=>{
@@ -43,5 +45,5 @@ const CarItem = (props) => {
         </View>
     );
 };
-export default CarItem;
+export default CarContainer;
   

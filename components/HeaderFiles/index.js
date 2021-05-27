@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Image} from 'react-native';
 import styles from './styles'
-
-const Header = () => {
+/* The header component will render the logo and the menu items*/
+const HeaderFiles = () => {
     return(
         <View style={styles.container}>
             <Image style={styles.logo} source={require('../../assets/images/logo.png')} />
@@ -10,4 +10,4 @@ const Header = () => {
         </View>
     );
 };
-export default Header;
+export default HeaderFiles;

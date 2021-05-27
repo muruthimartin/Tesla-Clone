@@ -1,15 +1,17 @@
 import React from 'react';
 import {FlatList, View, Dimensions} from 'react-native';
-import CarItem from '../CarItem'
+import CarContainer from '../CarContainer'
 import styles from './styles';
 import cars from './cars'
-
-const CarsList = (props) => {
+/* The inventory listing container will loop through the cars array, 
+and insert them into the CarContainer component. To loop through the
+array, we use FlatList.*/
+const InventoryListing = (props) => {
     return (
         <View style={styles.container}>
             <FlatList 
                 data = {cars}
-                renderItem = {({item})=><CarItem car={item}/>}
+                renderItem = {({item})=><CarContainer car={item}/>}
                 showsVerticalScrollIndicator = {false}
                 snapToAlignment = {'start'}
                 decelerationRate = {'fast'}
@@ -17,5 +19,5 @@ const CarsList = (props) => {
                           
         </View> 
     );
-}
-export default CarsList;    
+} 
+export default InventoryListing;    

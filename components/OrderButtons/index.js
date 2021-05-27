@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, Pressable } from 'react-native';
 import styles from './styles';
 
-const StyledButton = (props) => {
+const OrderButtons = (props) => {
 
 //const type = props.type;
 //const content = props.content;
@@ -19,10 +19,10 @@ const textColor = type === 'primary' ? '#FFFFFF' : '#171A20';
                 style = {[styles.button,{backgroundColor : backgroundColor }]}
                 onPress = {()=> onPress()}
                 >
-            <Text style = {[styles.text, {textColor: textColor}]}>{content}</Text>
+            <Text style = {[styles.text, {color: textColor}]}>{content}</Text>
             </Pressable>
         </View>
     );
 };
 
-export default StyledButton;
+export default OrderButtons;
